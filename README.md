@@ -284,6 +284,7 @@ Below are the instructions for updating containers:
 
 ## Version History
 
+* **24.03.25:** - Add external_auth_id to webhook body
 * **04.01.25:** - Add php-opcache.
 * **17.12.24:** - Rebase to Alpine 3.21.
 * **11.10.24:** - Default to environment config over .env file config.
@@ -297,8 +298,8 @@ Below are the instructions for updating containers:
 ## Contact Information
 
 For support or inquiries, please contact:
-- Email: [your-email@example.com]
-- GitHub: [https://github.com/svenbledt]
+- Email: [sven@bledt.dev](mailto:sven@bledt.dev)
+- GitHub: [https://github.com/svenbledt](https://github.com/svenbledt)
 
 ---
 
