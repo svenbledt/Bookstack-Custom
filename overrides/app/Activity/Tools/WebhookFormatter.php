@@ -39,7 +39,9 @@ class WebhookFormatter
             'event'                    => $this->event,
             'text'                     => $this->formatText(),
             'triggered_at'             => Carbon::createFromTimestampUTC($this->initiatedTime)->toISOString(),
-            'triggered_by'             => array_merge($this->initiator->attributesToArray(), ['discord_id' => $this->initiator->discord_id]),
+            'triggered_by'             => array_merge($this->initiator->attributesToArray(), [
+                'external_auth_id' => $this->initiator->external_auth_id ?? "",
+            ]),
             'triggered_by_profile_url' => $this->initiator->getProfileUrl(),
             'webhook_id'               => $this->webhook->id,
             'webhook_name'             => $this->webhook->name,
