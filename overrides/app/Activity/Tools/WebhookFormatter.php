@@ -83,6 +83,12 @@ class WebhookFormatter
             fn ($event, $model) => ($model instanceof Page && ($event === ActivityType::PAGE_CREATE || $event === ActivityType::PAGE_UPDATE)),
             fn ($model) => $model->load('currentRevision')
         );
+
+        // Add new formatter for loading parent and shelf information
+        $this->addModelFormatter(
+            fn ($event, $model) => ($model instanceof Entity),
+            fn ($model) => $model->load(['parent', 'parent.shelves'])
+        );
     }
 
     protected function formatModel(): array
